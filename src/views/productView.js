@@ -36,11 +36,10 @@ const ProductView = ({history, match})=>{
                     <div className='flex flex-col md:flex-row'>
 
                         <div className=' md:w-3/5'>
-                            <img className='' src={product.image} alt={product.name}/>
+                            <img className='' src={product.image} alt={product.title}/>
                         </div>
                         <div className='md:w-1/5'>
-                            <h3 className='text-4xl leading-none'>{product.name}</h3>
-                            <h3 className='text-lg'><span className='font-bold'>${product.price}</span></h3>
+                            <h3 className='text-4xl leading-none'>{product.title}</h3>
                             <p>{product.description}</p>
                         </div>
                         <div className='md:w-1/5'>
@@ -59,7 +58,9 @@ const ProductView = ({history, match})=>{
                             <div>
                                 <button
                                 onClick={addToCartHandler}
-                                className={product.countInStock === 0 ? 'flex items-center justify-center w-full cursor-not-allowed btn' : 'flex items-center justify-center w-full btn'}
+                                className={product.countInStock === 0 ? 
+                                    'flex items-center justify-center w-full cursor-not-allowed btn' : 
+                                    'flex items-center justify-center w-full btn'}
                                 >
                                     <ShoppingBag className='w-5 h-5 mr-3'/>
                                     Add to cart
