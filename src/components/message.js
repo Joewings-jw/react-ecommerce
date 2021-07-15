@@ -8,7 +8,7 @@ const Message = ({ children}) => {
                     <Info className='feather-icon'/>
                 </div>
                 <div>
-                    <p className="font-bold">We are experiencing a problem:</p>
+                    <p className="font-bold">You might want to double check or try again:</p>
                     <p className="text-sm">{children}</p>
                 </div>
             </div>
